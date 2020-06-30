@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import sys
 
 try:
@@ -7,6 +6,7 @@ except ImportError:
     import __builtin__ as builtins
 
 old_import = builtins.__import__
+
 
 def my_import(name, *args, **kwargs):
     if name not in sys.modules:
